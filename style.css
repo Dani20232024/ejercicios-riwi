@@ -1,154 +1,281 @@
-
-@import url(https://fonts.googleapis.com/ccs2?family=Ubuntu:wght@300;400;500;700&display=swap);
-
 * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-body {
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+
+.logo {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+span.nombre {
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing 2s steps(11),blink .5s infinite step-end alternate;
+    overflow:hidden;
+}
+
+span {
+    color: #f9004d;
+}
+
+
+
+@keyframes blink {
+    50% { border-color: transparent;}
+}
+
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color: #f9004d;
+    transition: .4s;
+}
+
+.btn {
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+
+
+h3 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+
+h4 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+
+.about {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #191919;
+}
+
+.about img {
+    height: auto;
+    width: 430px;
+}
+
+.about-text {
+    width: 550px;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.about-text h2 {
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 23px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.about-text p {
+    color: white;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 19px;
+    margin-bottom: 45px;
+}
+
+
+
+
+.service {
+    background: #101010;
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.title h2 {
+    color: white;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: whitesmoke;
-}
-
-
-.card 
-{
-    position: relative;
-    width: 360px;
     min-height: 400px;
-    background-color: #fff;
-    box-shadow: 15px  15px 60px rgb(0,0,0,0.15 );
-    padding: 20px;
+}
 
- }
-
-
- .card .top {
-    display: flex;
-    align-items: center;
- }
-
-
- .card .top .userdetails {
-    display: flex;
-    align-items: center;
- }
-
- .card .top .userdetails .profile_img {
+.card {
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px;
+    background: #191919;
+    border-radius: 20px;
+    margin: 15px;
     position: relative;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
     overflow: hidden;
-    margin-right: 8px;
- }
+    text-align: center;
+}
 
- .cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
- }
+.card i {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: #f9004d;
+}
 
+h5 {
+    color: white;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
 
- .card .top .userdetails h3 {
-    font-size: 16px;
-    color: #4d4d4f;
-    font-weight: 500;
-    line-height: 1em;
- }
+.pra p {
+    color: white;
+    font-size: 21px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
 
+.card .button {
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: .4s;
+}
 
- .card .top .userdetails h3 span {
-    font-size: 0.75em;
- }
-
-
- .dot {
-    transform: scale(0,6);
-    cursor: pointer;
- }
-
-
- .imgBX {
+footer {
     position: relative;
     width: 100%;
-    height: 320px;
-    margin: 10px 0  15px;
- }
-
- .actionbtn {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
- }
-
- .actionbtn img {
-   max-width: 24px;
-   cursor: pointer;
- }
-
- .actionbtn .left img {
-   margin-right: 8px;
- }
-
-
-.message {
-   font-weight: 400;
-   margin-top: 5px;
-   color: #777;
-   line-height: 1.5em;
+    height: 300px;
+    background-color: #191919;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.message b {
-
-   color: #262626;
-   font-size: 16px;
-
+footer p:nth-child(1){
+   font-size: 30px;
+   color: white;
+   margin-bottom: 20px;
+   font-weight: bold;
 }
 
-.message span {
 
-   cursor: pointer;
-   color: #1d92ff;
+.social {
+    display: flex;
 }
 
-.comments {
-   margin-top: 10px;
-   font-weight: 400;
-   color: #999;
+.social a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9004d;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
 
-.addcomments {
-   display: flex;
-   align-items: center;
-   margin-top: 10px;
+
+nav ul li a::after {
+
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: #f9004d;
+    display: block;
+    transition: .5s ease;
 }
 
-.text {
-   width: 100%;
-   border: none;
-   outline: none;
-   font-weight: 400;
-   font-size: 14px;
-   color: #262626;
+nav ul li a:hover::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #f9004d;
+    display: block;
 }
-
-.text::placeholder {
-   color: #777;
-}
-
-.likes {
-   margin-top: 6px;
-}
-
-a {
-  width: 180px;
-}  
